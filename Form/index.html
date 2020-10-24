@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Regist Siswa</title>
+    </head>
+    <body>
+        <header>
+            <h1 style="color: rgba(15, 150, 150, 0.781);">
+                <b>
+                    Student Registration Form
+                </b>
+            </h1>
+        </header>
+        <form>
+            <div align="right">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" value=""><br>
+            </div>
+            <fieldset>
+            <legend><b>PERSONAL INFORMATION</b></legend>
+                    <table>
+                        
+                        <tr>
+                            <td><label for="name">NAME</label></td>
+                            <td><input type="text" id="name" name="name" required></td>
+                        </tr>
+                       <tr>
+                            <td><label for="birth">Date Of Birth</label></td>
+                            <td><input type="date" id="birth" name="birth" required></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset>
+                        <legend><b>CONTACT INFORMATION</b></legend>
+                    <table>
+                        <tr>
+                        <td><label for="address">ADDRESS</label></td>
+                        <td><input type="text" id="address" name="address" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">CITY</label></td>
+                        <td><input type="text" id="city" name="city" required></td>
+                        <td><label for="state">PROVINCE/STATE</label></td>
+                        <td><input type="text" id="state" name="state" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="zip">ZIP CODE</label></td>
+                        <td><input type="text" id="zip" name="zip" required></td>
+                        <td><label for="country">COUNTRY</label></td>
+                        <td><input type="text" id="country" name="country" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">PHONE</label></td>
+                        <td><input type="number" id="phone" name="phone" required></td>
+                        <td><label for="email">EMAIL</label></td>
+                        <td><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    </table>
+                    <table>
+                    <tr>
+                        <td>
+                        <label for="member">MEMBERSHIP TYPE</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="reguler" value="reguler" name="member">
+                            <label for="reguler">Reguler</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="premium" value="premium" name="member">
+                            <label for="premium">Premium</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="vip" value="vip" name="member">
+                            <label for="vip">VIP</label>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <b>COURSE INFORMATION</b>
+                </legend>
+                <table>
+                    <tr>
+                        <td><label for="course">COURSE NAME</label></td>
+                        <td><input type="text" id="course" name="course" required></td>
+                    </tr>
+                </table>
+                    <table>
+                    <tr>
+                        <td>
+                            <label >PAYMENT DETAILS</label>
+                            </td>
+                            <td>
+                                <input type="radio" id="cash" value="cash" name="payment">
+                                <label for="cash">Cash</label>
+                            </td>
+                            <td>
+                                <input type="radio" id="cheque" value="cheque" name="payment">
+                                <label for="cheque">Cheque</label>
+                            </td>
+                            <td>
+                                <input type="radio" id="credit" value="credit card" name="payment">
+                                <label for="credit">Credit Card</label>
+                            </td>
+                        </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <label>COMMENTS</label>
+                            <textarea name="comments"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <input type="submit" value="submit">    
+        </form>
+    </body>
+</html>
