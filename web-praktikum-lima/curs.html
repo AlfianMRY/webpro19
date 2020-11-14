@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function curs(){
+                let nilai_html = Number(document.getElementById("nilai").value);
+                let curs_html = Number(document.getElementById("duit").value);
+
+                console.log(nilai_html*curs_html);
+                let nilai = parseFloat(nilai_html);
+                let curs = parseFloat(curs_html);
+                let hasil = nilai*curs;
+                document.getElementById('hasil').innerHTML = hasil;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend> Kurs Rupiah - Mata Uang Asing </legend>
+                <table border="1px">
+                    <tr>
+                        <th>Masukan Nilai</th>
+                        <th>Values</th>
+                        <th>Nilai Rupiah</th>
+                    </tr>
+                    <tr>
+                        <td><input id="nilai" type="text"></td>
+                        <td>
+                            <select id="duit" onclick="curs()">
+                                <output>-- Pilih Mata Uang --</output>
+                                <option value="9915" >Dolar US</option>
+                                <option value="13472" >Dolar Singapure</option>
+                                <option value="874" >Ringgit Malaysia</option>
+                                <option value="120" >Yen Jepan</option>
+                                <option value="15888" >Euro</option>
+                                <option value="3592" >Rial Arab Saudi</option>
+                            </select>
+                        </td>
+                        <td><p id="hasil"></p></td> 
+                    </tr>                    
+                </table>
+            </fieldset>
+        </form>
+    </body>
+</html>

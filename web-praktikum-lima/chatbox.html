@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction() {
+                var msg = document.getElementById("text").value;
+                var para = document.createElement("P");
+                para.innerHTML = msg;
+                document.getElementById("message").appendChild(para);
+            }
+        </script>
+        <style>
+            table{
+                border: 2px solid black;
+                float: right;
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                <div id="message">
+                    <p></p>
+                </div>
+                </td>
+            </tr>
+            <tr >
+                <td>
+                    <input id="text" type="text" >
+                    <button type="button" id="submit" onclick="myFunction()">Send</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
