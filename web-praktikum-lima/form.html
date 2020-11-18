@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function validasi(){
+                var nama = document.getElementById("nama").value;
+                var email = document.getElementById("email").value;
+                var waktu = document.getElementById("waktu").value;
+                var tujuan = document.getElementById("tujuan").value;
+                var tiket = document.getElementById("tiket").value;
+                if(nama.length <= 30){
+                    if(tiket <= 10){
+                        alert(
+                        "Nama Anda : "+nama+
+                        ", Email Anda : "+email+
+                        ", Waktu Keberangkatan : "+waktu+
+                        ", Tujuan Anda : "+tujuan+
+                        ", Tiket Anda : "+tiket
+                        )
+                        return true;
+                    }
+                    else{
+                        alert("Maaf tiketnya max hanya 10");
+                        return false;
+                    }
+                }
+                else{
+                    alert("Maaf nama max hanya 30");
+                    return false;
+                }    
+            }
+        </script>
+        <style>
+            form{
+                /* margin: 0 auto;
+                width: 250px; */
+                border: 1px solid black; 
+                padding: 30px;
+                margin: 10px auto;
+                width: 180px;
+                background: #fff;
+                border-radius: 3px;
+                background-color: aqua;
+            }
+            input#submit{
+                color: #fff;
+                background-color: blue;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+            <div>
+                <form method="POST" onsubmit="validasi()">
+                    Nama Pelanggan : <br><input type="text" max="30" id="nama" required><br>
+                    Email : <br><input type="email" id="email" required><br>
+                    Jam Keberangkatan : <br><input type="time" id="waktu" required><br>
+                    Tujuan Keberangkatan : <br><input type="text" id="tujuan" required><br>
+                    Jumlah Tiket : <br><input type="number" min="1" max="10" id="tiket" required><br><br>
+                    <input type="submit" value="Submit" id="submit">
+                </form>
+            </div>
+    </body>
+    </html>
